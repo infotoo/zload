@@ -12,15 +12,23 @@ Because the source has used "[Line Macro](https://github.com/infotoo/line-macro)
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script type="text/javascript">
 
-$zload('lib_name',{
-  css: ['https://example.com/css/lib.css'],
-  js: ['https://example.com/js/lib.js']
+$zload('lib1',{
+  css: ['https://example.com/css/lib1.css'],
+  js: ['https://example.com/js/lib1.js']
 },function(){
   //callback function
 });
 
-$zload('lib_name',function(){
+$zload('lib1',function(){
   //another callback function 
+});
+
+// lib2 depends on lib1
+$zload('lib2',{
+  js: ['https://example.com/js/lib2.js'],
+  use: ['lib1']
+},function(){
+  //callback function 
 });
 
 </script>
