@@ -13,7 +13,7 @@ Because the source has used "[Line Macro](https://github.com/infotoo/line-macro)
 <script type="text/javascript">
 
 $zload('lib1',{
-  css: ['https://example.com/css/lib1.css'],
+  css: ['https://example.com/css/lib1.css','https://example.com/css/lib1-theme.css'],
   js: ['https://example.com/js/lib1.js']
 },function(){
   //callback function
@@ -25,7 +25,7 @@ $zload('lib1',function(){
 
 // lib2 depends on lib1
 $zload('lib2',{
-  js: ['https://example.com/js/lib2.js'],
+  js: ['https://example.com/js/lib2.js','https://example.com/js/lib2-addon.js'],
   use: ['lib1']
 },function(){
   //callback function 
