@@ -74,7 +74,7 @@ $zload.map['jquery'] = {
 <body>
 <script>
 /* load on the fly */
-$('jquery',function(){
+$zload('jquery',function(){
       $('body').append('we need jQuery now');
 });
 </script>
