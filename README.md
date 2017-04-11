@@ -6,9 +6,12 @@ Because the source has used "[Line Macro](https://github.com/infotoo/line-macro)
 
 ## Example 1
 ```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
 <script src="zload.min.js"></script>
 <script>
-
 $zload('lib1',{
   css: ['https://example.com/css/lib1.css','https://example.com/css/lib1-theme.css'],
   js: ['https://example.com/js/lib1.js']
@@ -27,9 +30,13 @@ $zload('lib2',{
 },function(){
   //callback function 
 });
-
 </script>
+</head>
+<body>
+</body>
+</html>
 ```
+
 ## Example 2
 ```html
 <!DOCTYPE html>
@@ -48,7 +55,31 @@ $zload('jquery',{
 <body>
 </body>
 </html>
+```
 
+## Example 3
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<script src="zload.min.js"></script>
+<script>
+/* define resource without loading */
+$zload.map['jquery'] = {
+    js: ['https://code.jquery.com/jquery-3.2.1.min.js']
+};
+</script>
+</head>
+<body>
+<script>
+/* load on the fly */
+$('jquery',function(){
+      $('body').append('we need jQuery now');
+});
+</script>
+</body>
+</html>
 ```
 
 ## Version Remark
