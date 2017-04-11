@@ -1,14 +1,15 @@
 # zload
-$zload is a jquery-based, JavaScript and CSS Loader with callback function
+$zload is a tiny JavaScript and CSS Loader with callback function 
 
 ## Important Notice
+Since version 3.0, $zload is no longer jquery-based. You can use $zload to load jQuery instead.
+
 Because the source has used "[Line Macro](https://github.com/infotoo/line-macro)" syntax to import external file, only the minified **"zload.min.js"** will work on the browser.
 
-## Example
+## Example 1
 ```html
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script type="text/javascript" src="zload.min.js"></script>
-<script type="text/javascript">
+<script src="zload.min.js"></script>
+<script>
 
 $zload('lib1',{
   css: ['https://example.com/css/lib1.css','https://example.com/css/lib1-theme.css'],
@@ -30,6 +31,26 @@ $zload('lib2',{
 });
 
 </script>
+```
+## Example 2
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<script src="zload.min.js"></script>
+<script>
+$zload('jquery',{
+    js: ['https://code.jquery.com/jquery-3.2.1.min.js']
+},function(){
+    $('body').append('jQuery can be loaded by $zload');
+});
+</script>
+</head>
+<body>
+</body>
+</html>
+
 ```
 
 ## Hint
