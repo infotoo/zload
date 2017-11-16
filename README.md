@@ -1,10 +1,8 @@
 # zload
 $zload is a tiny JavaScript and CSS Loader with callback function 
 
-## Important Notice
-Because the source has used "[Line Macro](https://github.com/infotoo/line-macro)" syntax to import external file, only the minified **"zload.min.js"** will work on the browser.
-
-## Example 1
+## Example
+### Example 1
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -37,7 +35,7 @@ $zload('lib2',{
 </html>
 ```
 
-## Example 2
+### Example 2
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -57,7 +55,7 @@ $zload('jquery',{
 </html>
 ```
 
-## Example 3
+### Example 3
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -83,9 +81,16 @@ $zload('jquery',function(){
 ```
 
 ## Version Remark
+### Version 3.3
+Since version 3.3, $zload is no longer to used "[Line Macro](https://github.com/infotoo/line-macro)" for import external library. The external library is bundle inside.
+
+### Version 3.0
+
 Since version 3.0, $zload is no longer jquery-based. You can use $zload to load jQuery instead.
 
-## Hint
+Because the source has used "[Line Macro](https://github.com/infotoo/line-macro)" syntax to import external file, only the minified **"zload.min.js"** will work on the browser.
+
+#### Hint
 If you want to build the minified file yourself, you may use our utility "[minify](https://github.com/infotoo/minify)" which will auto-handle "Line Macro" syntax.
 ```
 # /home/bin/minify zload.js
