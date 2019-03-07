@@ -24,7 +24,7 @@ $zload('lib1',function(){
 /* lib2 depends on lib1 */
 $zload('lib2',{
   js: ['https://example.com/js/lib2.js','https://example.com/js/lib2-addon.js'],
-  use: ['lib1']
+  uses: ['lib1']
 },function(){
   //callback function 
 });
